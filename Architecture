@@ -1,0 +1,33 @@
+Monolithic -- single code base with multiple modules.
+Single build with all modules in it but can run on different instances.
+
+Disadvantages::
+Difficult to manage.
+Single deployment for whole application.
+Difficult to adopt new technology for single application.
+Single bug may down your whole application.
+
+Advantages::
+Simple to develop, build and deploy.
+Network lattency is less.
+
+What are microservices::
+Small services that work together.They can communicate using HTTP protocol.
+
+Advantages::
+Easily use different technology to build microservice.
+One service may down without impacting others.
+Loosely coupled.
+
+Hystrix Dashboard:: Fault tolerance library.It helps when one service is down and is based on circuit design pattern.
+
+Eureka Service:: All microservice configuration like name and end-point is mentioned in Eureka service.
+
+Config service:: All common services's configuration in github  are mentioned in Config server.
+
+
+
+
+
+
+
