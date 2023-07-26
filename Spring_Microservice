@@ -1,1 +1,33 @@
 
+What is Open Fein?? Rest client to call other microservices in spring boot.
+It is declarative. Add below fein dependency::
+
+spring-cloud-starter-openfeign.
+
+@EnableFeignClients(package).
+
+eg We need to call address service from student service.
+
+Create FeignClient interface and annotate with @FeignClient(url=" ", path="").
+
+In StudentService, autowire AddressFeignClient
+
+Eureka Server:: Each microservice register itself with Eureka.Key is service name.
+
+Create Eureka server. Add below eureka dependency::
+spring-cloud-starter-netflix-eureka-server
+
+
+server.port::8761
+
+In springbootmainapplication 
+
+@EnableEurekaServer
+
+In student and address microservice, add below dependency
+spring-cloud-starter-netflix-eureka-client
+
+@EnableEurekaClient in all microservices
+
+eureka.client.service-url.defaultZone=hhtp::localhost:8761/eurka
+
